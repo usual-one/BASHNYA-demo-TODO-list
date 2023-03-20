@@ -5,19 +5,32 @@
   --secondary-color: #146C94;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Open sans';
 
   margin: 4vh 20%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
+
+  background: #ededed;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  border-bottom: 1px rgba(0, 0, 0, .4) solid;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, .4);
+
+  padding-bottom: 10px;
+  box-sizing: border-box;
 }
 
 header #add-button {
@@ -49,11 +62,16 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  padding: 10px 0;
+  box-sizing: border-box;
 }
 
 main .todo-container {
+  padding-right: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
 }
 
@@ -75,11 +93,14 @@ main .todo-container {
 }
 
 .todo-name-input {
+  background: transparent;
   border: none;
+  border-bottom: 2px rgba(0, 0, 0, 0), solid;
   outline: 0;
 
   font-family: 'Open sans';
   font-size: 14px;
+  transition: .2s;
 }
 
 .todo-name-input:focus {
