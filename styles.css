@@ -1,0 +1,108 @@
+:root {
+  --white-color: #F6F1F1;
+  --black-color: #000000;
+  --primary-color: #19A7CE;
+  --secondary-color: #146C94;
+}
+
+body {
+  font-family: 'Open sans';
+
+  margin: 4vh 20%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header #add-button {
+  width: 45px;
+  height: 30px;
+  border-radius: 10px;
+
+  background: var(--primary-color);
+  border: 0;
+  color: var(--white-color);
+  transition: .3s;
+
+  cursor: pointer;
+}
+
+header #add-button:hover {
+  background: var(--secondary-color);
+}
+
+header #add-button:active {
+  transform: scale(.95);
+}
+
+main {
+  height: 100%;
+  flex-grow: 1;
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main .todo-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.todo-container .todo-name-input {
+  flex-grow: 1;
+}
+
+.todo-completed-checkbox {
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+
+  border-width: 2px;
+}
+
+.todo-completed-checkbox:checked + .todo-name-input {
+  text-decoration: line-through;
+  opacity: .4;
+}
+
+.todo-name-input {
+  border: none;
+  outline: 0;
+
+  font-family: 'Open sans';
+  font-size: 14px;
+}
+
+.todo-name-input:focus {
+  border-bottom: 2px var(--black-color) solid;
+}
+
+.todo-delete-button {
+  width: 45px;
+  height: 30px;
+  border-radius: 10px;
+
+  background: #d95841;
+  border: 0;
+  color: var(--white-color);
+  transition: .3s;
+
+  cursor: pointer;
+}
+
+.todo-delete-button:hover {
+  background: #9c3e2d;
+}
+
+.todo-delete-button:active {
+  transform: scale(.95);
+}
